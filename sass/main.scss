@@ -1,13 +1,13 @@
-/*
-COLORS:
+$color-primary: #7ed56f;
+$color-primary-light: #55c57a;
+$color-primary-dark: #28b485;
+$color-grey-dark: #777;
+$color-white: #fff;
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
 
-*/
-
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
@@ -22,7 +22,7 @@ body {
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.7;
-    color: #777;
+    color: $color-grey-dark;
     padding: 3rem;
     box-sizing: border-box;
 }
@@ -30,8 +30,8 @@ body {
 .header {
     height: 95vh;
     background-image: linear-gradient(to right bottom,
-            rgba(126, 213, 111, .8),
-            rgb(40, 180, 133, .8)),
+            rgba($color-primary-light, .8),
+            rgba($color-primary-dark, .8)),
         url("../img/hero.jpg");
     background-size: cover;
     background-position: top;
@@ -58,7 +58,7 @@ body {
 }
 
 .heading-primary {
-    color: #fff;
+    color: $color-white;
     text-transform: uppercase;
 
     backface-visibility: hidden;
@@ -129,7 +129,8 @@ body {
     }
 }
 
-.btn:link, .btn:visited {
+.btn:link,
+.btn:visited {
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 3.5rem;
@@ -150,8 +151,8 @@ body {
 }
 
 .btn--white {
-    background-color: #fff;
-    color: #777;
+    background-color: $color-white;
+    color: $color-grey-dark;
 }
 
 .btn::after {
@@ -168,7 +169,7 @@ body {
 }
 
 .btn--white::after {
-    background-color: #fff;
+    background-color: $color-white;
 }
 
 .btn:hover::after {
