@@ -12,3 +12,30 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+// Media Query Manager
+// 0-600           phone
+// 600-900         tablet potrait
+// 900-1200        tablet landscape
+// 1200-1800       normal
+// 1800+           big-desktop
+
+// possible device values
+
+// $phone: 37.5em; //600px
+// $tab-port: 56.25em; //900px
+// $tab-land: 75em; //1200px
+// $big-desktop: 112.5rem //1800px
+
+@mixin respond($breakpoint){
+    @if $breakpoint == 112.5rem {
+        @media (min-width: $breakpoint){
+            @content
+        }
+    } @else{
+        @media (max-width: $breakpoint){
+            @content
+        }
+    }    
+}
